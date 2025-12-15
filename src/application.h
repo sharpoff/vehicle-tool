@@ -38,6 +38,7 @@ private:
 
     bool running = false;
     bool minimized = false;
+    bool fullscreen = false;
 
     float delta = 0.0f;
     float time = 0.0f;

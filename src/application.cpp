@@ -113,10 +113,16 @@ void Application::handleInput()
                 running = false;
                 break;
             }
-            case SDL_EVENT_KEY_UP:
+            case SDL_EVENT_KEY_UP: {
+                break;
+            }
             case SDL_EVENT_KEY_DOWN: {
                 if (event.key.key == SDLK_ESCAPE) {
                     running = false;
+                }
+                if (event.key.key == SDLK_F) {
+                    fullscreen = !fullscreen;
+                    SDL_SetWindowFullscreen(window, fullscreen);
                 }
                 if (event.key.key == SDLK_P) {
                     renderer->reloadShaders();
