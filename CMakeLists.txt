@@ -25,6 +25,6 @@ target_link_libraries(main
     PUBLIC
 
     OpenGL::OpenGL
-    SDL3
+    SDL3::SDL3-static
     glm
 )
